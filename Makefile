@@ -1,5 +1,5 @@
 # used by Linux kernel
-obj-y = mymain.o myinterrupt.o
+obj-y = 
 
 # the generic parts
 LINUX_URL = https://www.kernel.org/pub/linux/kernel/v4.x
