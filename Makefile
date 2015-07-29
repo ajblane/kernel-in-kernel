@@ -59,7 +59,7 @@ CPUS := $(shell grep -c ^processor /proc/cpuinfo 2>/dev/null || \
 endif
 
 .stamps/build: $(KERNEL)/Makefile \
-              src/scheduler.c src/main.c src/mypcb.h
+              src/scheduler.c src/main.c src/mypcb.h src/io_apic.c src/io_apic.h
 	(cd $(KERNEL); $(MAKE) O=$(OUT) -j $(CPUS))
 	@touch $@
 
