@@ -1,5 +1,8 @@
 #include "io_apic.h"
 
+volatile struct IO_APIC_MMR * io_apic_mmr;
+volatile struct IO_APIC_INFO io_apic_info;
+
 void io_apic_init(void){
 	int i = 0;	
 	union ioapicver_union icu;

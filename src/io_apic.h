@@ -58,8 +58,7 @@ struct IO_APIC_INFO{
 	int max_redirection_entry;	
 };
 
-volatile struct IO_APIC_MMR * io_apic_mmr;
-volatile struct IO_APIC_INFO io_apic_info;
+
 
 
 

@@ -1,6 +1,7 @@
 #include <linux/printk.h>
 
 #include "mypcb.h"
+#include "io_apic.h"
 
 myPCB task[MAX_TASK_NUM], *my_current_task = NULL;
 volatile int my_need_sched = 0;
@@ -11,6 +12,9 @@ void __init my_start_kernel(void)
 {
 	int pid = 0;
 	int i;
+
+	io_apic_init();
+	io_apic_enable(0);
 
 	/* Initialize process 0 */
 	task[pid].pid = pid;
